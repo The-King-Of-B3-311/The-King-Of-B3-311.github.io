@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Hexo</title>
+  <title>labuladong - 算法学习 day 1 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="day 1 Linux ：进程、线程、文件描述 进程｜ ｜---属性：进程号（pid）、进程状态等 ｜ ｜---进程就是一个数据结构 文件描述 ：文件指针数组｜ ｜---进程创建时，files前三位被填入默认值。分别指向标准输入、输出、错误流 ｜---文件描述符 -&gt; 文件指针数组的索引 线程：与进程的区别-&gt;唯一的区别就是共享的数据区域不同｜ ｜---线程的某些数据区域和其父进程共享">
+<meta property="og:type" content="article">
+<meta property="og:title" content="labuladong - 算法学习 day 1">
+<meta property="og:url" content="http://example.com/2021/02/01/labuladong-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-day-1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="day 1 Linux ：进程、线程、文件描述 进程｜ ｜---属性：进程号（pid）、进程状态等 ｜ ｜---进程就是一个数据结构 文件描述 ：文件指针数组｜ ｜---进程创建时，files前三位被填入默认值。分别指向标准输入、输出、错误流 ｜---文件描述符 -&gt; 文件指针数组的索引 线程：与进程的区别-&gt;唯一的区别就是共享的数据区域不同｜ ｜---线程的某些数据区域和其父进程共享">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-02-01T11:43:44.000Z">
+<meta property="article:modified_time" content="2021-02-01T12:53:00.343Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -150,103 +154,220 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-labuladong-算法学习-day-1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      labuladong - 算法学习 day 1
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/02/01/labuladong-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-day-1/" class="archive-article-date">
+
+        
+        <a href="/2021/02/01/labuladong-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-day-1/" class="archive-article-date">
   	<time datetime="2021-02-01T11:43:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/02/01/labuladong-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-day-1/">labuladong - 算法学习 day 1</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="day-1"><a href="#day-1" class="headerlink" title="day 1"></a>day 1</h2><hr>
+<p>Linux ：进程、线程、文件描述</p>
+<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><pre><code>｜
+｜---属性：进程号（pid）、进程状态等
+｜
+｜---进程就是一个数据结构</code></pre>
+<h1 id="文件描述-：文件指针数组"><a href="#文件描述-：文件指针数组" class="headerlink" title="文件描述 ：文件指针数组"></a>文件描述 ：文件指针数组</h1><pre><code>｜
+｜---进程创建时，files前三位被填入默认值。分别指向标准输入、输出、错误流
+｜---文件描述符 -&gt; 文件指针数组的索引</code></pre>
+<h1 id="线程：与进程的区别-gt-唯一的区别就是共享的数据区域不同"><a href="#线程：与进程的区别-gt-唯一的区别就是共享的数据区域不同" class="headerlink" title="线程：与进程的区别-&gt;唯一的区别就是共享的数据区域不同"></a>线程：与进程的区别-&gt;唯一的区别就是共享的数据区域不同</h1><pre><code>｜
+｜---线程的某些数据区域和其父进程共享
+｜---多线程要利用锁机制，避免多个线程同时往同一区域写入数据，否则可能造成数据错乱</code></pre>
+<hr>
+<h1 id="手把手刷链表题目"><a href="#手把手刷链表题目" class="headerlink" title="手把手刷链表题目"></a>手把手刷链表题目</h1><pre><code>递归反转链表的一部分：
+|
+|//单链表节点的结构
+|pulic class ListNode&#123;
+|    int val;
+|    ListNode next;
+|    ListNode(int x) &#123;val = x;&#125;
+|&#125;
 
-        <div class="article-info info-on-right">
-          
-          
+一、递归反转整个链表
+|ListNode reverse(ListNode head)&#123;
+|        if(head.next == null) return head;
+|        ListNode last = reverse(head.next);
+|        head.next.next = head;
+|        head.next = null;
+|        return last;
+|&#125;
 
+链表只有一个节点的时候反转也是自己，返回即可
+|- if(head.next == null) return; 
+
+新头节点为last，head为最后一个节点，将末尾指向null
+｜-head.next = null;
+
+二、反转链表前N个节点
+|
+|ListNode successor = null;    //后驱节点
+|ListNode reverseN(ListNode head,int n)&#123;
+|    if(n==1)&#123;
+|        //记录n+1节点
+|        successer = head.next
+|        return head
+|    &#125;
+|    //以head.next 为起点，需要反转前n -1 个节点
+|    ListNode last = reverseN(head.next,n -1);
+|    head.next.next = head;
+|    //让反转之后的head节点和后面的节点相连
+|    head.next = successor;
+|    return last;
+|&#125;
+
+三、反转链表的一部分
+|
+|ListNode reverseBetween(ListNode head,int m,int n)
+|&#123;
+|    if(m==1)&#123;
+|        return reverseN(head,n);
+|    &#125;
+|    head.next = reverseBetween(head.next,m - 1,n -1)
+|&#125;</code></pre>
+<h1 id="总结：处理技巧-gt-不要跳进递归，而是利用明确的定义来实现"><a href="#总结：处理技巧-gt-不要跳进递归，而是利用明确的定义来实现" class="headerlink" title="总结：处理技巧-&gt;不要跳进递归，而是利用明确的定义来实现"></a>总结：处理技巧-&gt;不要跳进递归，而是利用明确的定义来实现</h1><hr>
+<h1 id=""><a href="#" class="headerlink" title="???"></a>???</h1><p>1、管道符<br>2、多线程、多进程都是并发，都可以提高处理器的利用效率</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/02/01/labuladong-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-day-1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/01/31/blog-%E8%AE%B0%E5%BD%95%E8%AF%B4%E6%98%8E/" class="archive-article-date">
-  	<time datetime="2021-01-30T19:10:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-31</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/31/blog-%E8%AE%B0%E5%BD%95%E8%AF%B4%E6%98%8E/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">blog 记录说明</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/01/31/blog-%E8%AE%B0%E5%BD%95%E8%AF%B4%E6%98%8E/">blog 记录说明</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/01/25/hello-world/" class="archive-article-date">
-  	<time datetime="2021-01-25T05:36:03.857Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/01/25/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -269,8 +390,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

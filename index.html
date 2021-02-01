@@ -152,6 +152,133 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-labuladong-算法学习-day-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/01/labuladong-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-day-1/">labuladong - 算法学习 day 1</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/01/labuladong-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-day-1/" class="archive-article-date">
+  	<time datetime="2021-02-01T11:43:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="day-1"><a href="#day-1" class="headerlink" title="day 1"></a>day 1</h2><hr>
+<p>Linux ：进程、线程、文件描述</p>
+<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><pre><code>｜
+｜---属性：进程号（pid）、进程状态等
+｜
+｜---进程就是一个数据结构</code></pre>
+<h1 id="文件描述-：文件指针数组"><a href="#文件描述-：文件指针数组" class="headerlink" title="文件描述 ：文件指针数组"></a>文件描述 ：文件指针数组</h1><pre><code>｜
+｜---进程创建时，files前三位被填入默认值。分别指向标准输入、输出、错误流
+｜---文件描述符 -&gt; 文件指针数组的索引</code></pre>
+<h1 id="线程：与进程的区别-gt-唯一的区别就是共享的数据区域不同"><a href="#线程：与进程的区别-gt-唯一的区别就是共享的数据区域不同" class="headerlink" title="线程：与进程的区别-&gt;唯一的区别就是共享的数据区域不同"></a>线程：与进程的区别-&gt;唯一的区别就是共享的数据区域不同</h1><pre><code>｜
+｜---线程的某些数据区域和其父进程共享
+｜---多线程要利用锁机制，避免多个线程同时往同一区域写入数据，否则可能造成数据错乱</code></pre>
+<hr>
+<h1 id="手把手刷链表题目"><a href="#手把手刷链表题目" class="headerlink" title="手把手刷链表题目"></a>手把手刷链表题目</h1><pre><code>递归反转链表的一部分：
+|
+|//单链表节点的结构
+|pulic class ListNode&#123;
+|    int val;
+|    ListNode next;
+|    ListNode(int x) &#123;val = x;&#125;
+|&#125;
+
+一、递归反转整个链表
+|ListNode reverse(ListNode head)&#123;
+|        if(head.next == null) return head;
+|        ListNode last = reverse(head.next);
+|        head.next.next = head;
+|        head.next = null;
+|        return last;
+|&#125;
+
+链表只有一个节点的时候反转也是自己，返回即可
+|- if(head.next == null) return; 
+
+新头节点为last，head为最后一个节点，将末尾指向null
+｜-head.next = null;
+
+二、反转链表前N个节点
+|
+|ListNode successor = null;    //后驱节点
+|ListNode reverseN(ListNode head,int n)&#123;
+|    if(n==1)&#123;
+|        //记录n+1节点
+|        successer = head.next
+|        return head
+|    &#125;
+|    //以head.next 为起点，需要反转前n -1 个节点
+|    ListNode last = reverseN(head.next,n -1);
+|    head.next.next = head;
+|    //让反转之后的head节点和后面的节点相连
+|    head.next = successor;
+|    return last;
+|&#125;
+
+三、反转链表的一部分
+|
+|ListNode reverseBetween(ListNode head,int m,int n)
+|&#123;
+|    if(m==1)&#123;
+|        return reverseN(head,n);
+|    &#125;
+|    head.next = reverseBetween(head.next,m - 1,n -1)
+|&#125;</code></pre>
+<h1 id="总结：处理技巧-gt-不要跳进递归，而是利用明确的定义来实现"><a href="#总结：处理技巧-gt-不要跳进递归，而是利用明确的定义来实现" class="headerlink" title="总结：处理技巧-&gt;不要跳进递归，而是利用明确的定义来实现"></a>总结：处理技巧-&gt;不要跳进递归，而是利用明确的定义来实现</h1><hr>
+<h1 id=""><a href="#" class="headerlink" title="???"></a>???</h1><p>1、管道符<br>2、多线程、多进程都是并发，都可以提高处理器的利用效率</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/01/labuladong-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-day-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-blog-记录说明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
