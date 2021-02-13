@@ -16,8 +16,9 @@
 <meta property="og:description" content="day 2如何k个一组反转链表 链接：lauladong算法小抄  给一个链表，每k个节点一组进行翻转，返回链表后的链表。 示例： 给定：1-&gt;2-&gt;3-&gt;4-&gt;5 当k&#x3D;2,返回：2-&gt;1-&gt;4-&gt;3-&gt;5 当k&#x3D;3,返回：3-&gt;2-&gt;1-&gt;4-&gt;5  一、分析  1、问题具有递归性质 2、根据递归性质，算法流程如下： 先反">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-02T11:56:45.000Z">
-<meta property="article:modified_time" content="2021-02-02T12:59:22.458Z">
+<meta property="article:modified_time" content="2021-02-09T18:16:25.005Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="labuladong-算法小抄">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -193,8 +194,8 @@
 </li>
 </ul>
 <p><strong>二、代码实现</strong></p>
-<pre><code>__反转以a为节点的链表__    
-ListNode reverse(ListNode a)&#123;
+<p><strong>反转以a为节点的链表</strong>    </p>
+<pre><code>ListNode reverse(ListNode a)&#123;
     ListNode pre,cur,nxt;
     pre = null;cur=a;nxt=a;
     while(cur != null)&#123;
@@ -207,11 +208,9 @@ ListNode reverse(ListNode a)&#123;
     &#125;
     //返回反转后的结点
     return pre;
-&#125;
-
-
-__反转区间[a,b)的元素__
-ListNode reverse(ListNode a,ListNode b)&#123;
+&#125;</code></pre>
+<p><strong>反转区间[a,b)的元素</strong></p>
+<pre><code>ListNode reverse(ListNode a,ListNode b)&#123;
     ListNode pre,cur,nxt;
     pre = null;cur=a;nxt=b;
     while(cur != b)&#123;
@@ -228,6 +227,14 @@ ListNode reverse(ListNode a,ListNode b)&#123;
 <p><strong><em>最终实现反转函数</em></strong><br>   ListNode reverseKGroup(ListNode head,int k){<br>       if (head == null): return;<br>       //区间[a,b)包含k个带反转元素<br>       a = b = head;<br>       for (int i = 0;i &lt; k;i ++){<br>           if(b == null) return head;<br>           b = b.next;<br>       }<br>       //反转前k个元素<br>       ListNode newHead = reverse(a,b);<br>       //递归反转后续链表并链接起来<br>       a.next = reverseKGroup(b,k);<br>       retrun newHead;<br>   }</p>
 </blockquote>
 </blockquote>
+<hr>
+<p><strong><em>关于Linux shell 必须知道的</em></strong></p>
+<ul>
+<li>1、标准输入和命令参数的区别</li>
+<li>2、在后台运行命令在退出终端后也全部退出了</li>
+<li>3、有的命令和 sudo 一起用就 command not found</li>
+</ul>
+<p>–</p>
 
       
 
@@ -257,6 +264,17 @@ ListNode reverse(ListNode a,ListNode b)&#123;
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">labuladong-算法小抄</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -456,6 +474,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">labuladong-算法小抄</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
